@@ -1,6 +1,6 @@
 Items::Application.routes.draw do
  # get "welcome/index" 
-
+match '/', to: "welcome#index"
   match '/home', to: 'welcome#index'
   match '/you', to: 'welcome#you'
   match '/about', to: 'welcome#about'
