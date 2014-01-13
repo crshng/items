@@ -24,7 +24,15 @@ body {
 		&:hover {
 			background-color:yellow;
 		}
+
+		&.items {
+			text-decoration: none;
+			border:none;
+			background: image-url("moving_underline.gif")repeat-x;
+			background-position: 0 100%;
+		}
 	}
+
 
 	h1 {
 		a {
@@ -32,88 +40,72 @@ body {
 		}
 	}
 
-header {
-	display:block;
-	margin: auto;
-	text-align: center;
-	position: fixed;
-	top: 0;
-	right: 0;
-	left: 0;
-	z-index: 2;
-	-webkit-transition-duration: 800ms;
-	transition-duration: 800ms;
-	-webkit-transition-property: opacity, background-color;
-	transition-property: opacity, background-color;	
-
-	.inner {
-		margin: auto;
-		max-width: 1008px;
-		position: relative;
+	h2 {
+		font-weight:100;
 	}
 
-	#main {
-		display: block;
+	header {
+		display:block;
+		margin: auto;
+		text-align: center;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 2;
+		-webkit-transition-duration: 800ms;
+		transition-duration: 800ms;
+		-webkit-transition-property: opacity, background-color;
+		transition-property: opacity, background-color;	
 
-		a {
-			color: inherit;
-			display: inline-block;
-			font-size: 18px;
-			font-weight: 400;
-			letter-spacing: 1px;
-			line-height: 1;
-			margin: 20px 20px 0 20px;
-			text-decoration: none;
-			-webkit-backface-visibility: hidden;
-			-webkit-transition-duration: 800ms;
-			transition-duration: 800ms;
-			text-decoration: none;
-
-			&:hover {
-				border-bottom: 1px dashed black;
-				opacity:0.7;
-			}
+		.inner {
+			margin: auto;
+			max-width: 1008px;
+			position: relative;
 		}
-	}
 
-}
-
-footer {
-	font-size: 13px;
-	margin: -54px auto 0;
-	max-width: 1008px;
-	overflow: hidden;
-	position: relative;
-	text-align: center;
-	display: block;
-	-webkit-transition-duration: 800ms;
-	transition-duration: 800ms;
-
-	.inner {
-		margin: auto;
-		max-width: 1008px;
-
-		#social {
-			-webkit-transition-property: opacity;
-			transition-property: opacity;
-			-moz-transition: opacity 800ms ease 0s;
-			-o-transition: opacity 800ms ease 0s;
-			-webkit-transition: opacity 800ms ease 0s;
-			-ms-transition: opacity 800ms ease 0s;
-			transition: opacity 800ms ease 0s;
-			opacity:0.4;
-			-webkit-backface-visibility: hidden;
-
-
-			&:hover {
-				opacity:0.7;
-			}
+		#main {
+			display: block;
 
 			a {
-				color: #333333;
+				color: inherit;
 				display: inline-block;
 				font-size: 18px;
+				font-weight: 400;
+				letter-spacing: 1px;
+				line-height: 1;
+				margin: 20px 20px 0 20px;
 				text-decoration: none;
+				-webkit-backface-visibility: hidden;
+				-webkit-transition-duration: 800ms;
+				transition-duration: 800ms;
+				text-decoration: none;
+
+				&:hover {
+					border-bottom: 1px dashed black;
+					opacity:0.7;
+				}
+			}
+		}
+
+	}
+
+	footer {
+		font-size: 13px;
+		margin: -54px auto 0;
+		max-width: 1008px;
+		overflow: hidden;
+		position: relative;
+		text-align: center;
+		display: block;
+		-webkit-transition-duration: 800ms;
+		transition-duration: 800ms;
+
+		.inner {
+			margin: auto;
+			max-width: 1008px;
+
+			#social {
 				-webkit-transition-property: opacity;
 				transition-property: opacity;
 				-moz-transition: opacity 800ms ease 0s;
@@ -121,79 +113,99 @@ footer {
 				-webkit-transition: opacity 800ms ease 0s;
 				-ms-transition: opacity 800ms ease 0s;
 				transition: opacity 800ms ease 0s;
-				padding: 1em;
+				opacity:0.4;
+				-webkit-backface-visibility: hidden;
+
 
 				&:hover {
-					opacity:1;
-					color:blue;
+					opacity:0.7;
+				}
+
+				a {
+					color: #333333;
+					display: inline-block;
+					font-size: 18px;
+					text-decoration: none;
+					-webkit-transition-property: opacity;
+					transition-property: opacity;
+					-moz-transition: opacity 800ms ease 0s;
+					-o-transition: opacity 800ms ease 0s;
+					-webkit-transition: opacity 800ms ease 0s;
+					-ms-transition: opacity 800ms ease 0s;
+					transition: opacity 800ms ease 0s;
+					padding: 1em;
+
+					&:hover {
+						opacity:1;
+						color:blue;
+					}
 				}
 			}
-		}
 
-	
-	}
-}
-
-
-section#content {
-		background-color: white;
-		margin: auto;
-		max-width: 50%;
-		min-height: 100%;
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;
-		position: relative;
-		padding: 180px 15px 0;
-		-webkit-transition-duration: 800ms;
-		transition-duration: 800ms;
-		-webkit-transition-property: opacity;
-		transition-property: opacity;
-		-moz-transition: opacity 1500ms ease 0s;
-		-o-transition: opacity 1500ms ease 0s;
-		-webkit-transition: opacity 1500ms ease 0s;
-		-ms-transition: opacity 1500ms ease 0s;
-		transition: opacity 1500ms ease 0s;
-		opacity:0;
-
-
-		.body_container {
-			padding:50px;
-		}
 		
-		&.show {
-			opacity:1;
 		}
-
-		.wrapper {
-			overflow: auto;
-			position: absolute;
-			top: 45%; left: 0; bottom: 0; right: 0;
-			vertical-align:middle;
-		}
-}
-
-
-
-
-a {
-	text-decoration: none;
-	color:black;
-	cursor: pointer;
-}
-
-
-
-#logo {
-	margin: 30px 0 0;
-	display: block;
-	font-weight:100;
-
-	#logo_link {
-		text-decoration: none;
-		background: image-url("moving_underline.gif")repeat-x;
-		background-position: 0 100%;
 	}
-}
+
+
+	section#content {
+			background-color: white;
+			margin: auto;
+			max-width: 50%;
+			min-height: 100%;
+			-moz-box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+			position: relative;
+			padding: 180px 15px 0;
+			-webkit-transition-duration: 800ms;
+			transition-duration: 800ms;
+			-webkit-transition-property: opacity;
+			transition-property: opacity;
+			-moz-transition: opacity 1500ms ease 0s;
+			-o-transition: opacity 1500ms ease 0s;
+			-webkit-transition: opacity 1500ms ease 0s;
+			-ms-transition: opacity 1500ms ease 0s;
+			transition: opacity 1500ms ease 0s;
+			opacity:0;
+
+
+			.body_container {
+				padding:50px;
+			}
+			
+			&.show {
+				opacity:1;
+			}
+
+			.wrapper {
+				overflow: auto;
+				position: absolute;
+				top: 45%; left: 0; bottom: 0; right: 0;
+				vertical-align:middle;
+			}
+	}
+
+
+
+
+	a {
+		text-decoration: none;
+		color:black;
+		cursor: pointer;
+	}
+
+
+
+	#logo {
+		margin: 30px 0 0;
+		display: block;
+		font-weight:100;
+
+		#logo_link {
+			text-decoration: none;
+			background: image-url("moving_underline.gif")repeat-x;
+			background-position: 0 100%;
+		}
+	}
 }
 
