@@ -1,10 +1,9 @@
 Items::Application.routes.draw do
- # get "welcome/index" 
-match '/', to: "welcome#index"
-  match '/home', to: 'welcome#index'
-  match '/you', to: 'welcome#you'
-  match '/about', to: 'welcome#about'
-  match '/contact', to: 'welcome#contact'
+  get "welcome/index"  
+  get "welcome/you"
+  get "welcome/explore"
+  get "welcome/about"
+  get "welcome/contact"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
