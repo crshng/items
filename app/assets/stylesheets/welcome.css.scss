@@ -1,34 +1,156 @@
 @import "bootstrap";
 
-body {
-	font: normal medium/2 monospace;
-	font-family: monospace;
-	font-size: medium;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: normal;
-	line-height: 2;
+html {
+    height: 100%;
+}
 
+body {
+	color: #333333;
+	font-family: 'Helvetica';	height: 100%;
+	letter-spacing: 1px;
+	margin: 0;
+	display: block;
+	overflow-y:hidden;
+
+
+	p {
+		letter-spacing: 1px;
+	}
+
+	u {
+		text-decoration: none;
+		border-bottom: 2px solid #0089fa;
+	}
+
+	h1 {
+		a {
+			text-decoration:none;
+		}
+	}
+
+header {
+	display:block;
+	margin: auto;
+	text-align: center;
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 2;
+	-webkit-transition-duration: 800ms;
+	transition-duration: 800ms;
+	-webkit-transition-property: opacity, background-color;
+	transition-property: opacity, background-color;	
+
+	.inner {
+		margin: auto;
+		max-width: 1008px;
+		position: relative;
+	}
+
+	#main {
+		display: block;
+
+		a {
+			color: inherit;
+			display: inline-block;
+			font-size: 18px;
+			font-weight: 400;
+			letter-spacing: 1px;
+			line-height: 1;
+			padding: 20px;
+			text-decoration: none;
+			-webkit-backface-visibility: hidden;
+			-webkit-transition-duration: 800ms;
+			transition-duration: 800ms;
+		}
+	}
 
 }
+
+footer {
+	font-size: 13px;
+	margin: -54px auto 0;
+	max-width: 1008px;
+	overflow: hidden;
+	position: relative;
+	text-align: center;
+	display: block;
+	-webkit-transition-duration: 800ms;
+	transition-duration: 800ms;
+
+	.inner {
+		margin: auto;
+		max-width: 1008px;
+
+		#social a {
+			color: #333333;
+			display: inline-block;
+			font-size: 18px;
+			text-decoration: none;
+			-webkit-transition-duration: 400ms;
+			transition-duration: 400ms;
+			padding: 1em;
+		}
+	}
+}
+
+
+section#content {
+		background-color: white;
+		margin: auto;
+		max-width: 50%;
+		min-height: 100%;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		position: relative;
+		padding: 180px 15px 0;
+		-webkit-transition-duration: 800ms;
+		transition-duration: 800ms;
+		-webkit-transition-property: opacity;
+		transition-property: opacity;
+		-moz-transition: opacity 1500ms ease 0s;
+		-o-transition: opacity 1500ms ease 0s;
+		-webkit-transition: opacity 1500ms ease 0s;
+		-ms-transition: opacity 1500ms ease 0s;
+		transition: opacity 1500ms ease 0s;
+		opacity:0;
+
+
+		.body_container {
+			padding:50px;
+		}
+		
+		&.show {
+			opacity:1;
+		}
+
+		.wrapper {
+			overflow: auto;
+			position: absolute;
+			top: 45%; left: 0; bottom: 0; right: 0;
+			vertical-align:middle;
+		}
+}
+
+
+
 
 a {
 	text-decoration: none;
 	color:black;
-	color: #006600;
 	cursor: pointer;
 }
 
- 	
-.logo_container {
-	font-size:16px;
-	position: fixed;
-	top: 20px;
-	left: 20px;
-	margin: 0;
-	padding: 0;
+
+
+#logo {
+	margin: 30px 0 0;
+	display: block;
+	#logo_link {
+		text-decoration: none;
+	}
+}
 }
 
-.logo {
-	text-decoration:none;
-}

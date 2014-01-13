@@ -1,5 +1,8 @@
 Items::Application.routes.draw do
   get "welcome/index"
+  get "welcome/you"
+  get "welcome/explore"
+  get "welcome/about"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
