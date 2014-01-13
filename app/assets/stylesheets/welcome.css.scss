@@ -19,7 +19,7 @@ body {
 
 	u {
 		text-decoration: none;
-		border-bottom: 2px solid #0089fa;
+		border-bottom: 2px solid blue;
 
 		&:hover {
 			background-color:yellow;
@@ -65,8 +65,8 @@ header {
 			margin: 20px 20px 0 20px;
 			text-decoration: none;
 			-webkit-backface-visibility: hidden;
-			-webkit-transition-duration: 500ms;
-			transition-duration: 500ms;
+			-webkit-transition-duration: 800ms;
+			transition-duration: 800ms;
 			text-decoration: none;
 
 			&:hover {
@@ -93,15 +93,44 @@ footer {
 		margin: auto;
 		max-width: 1008px;
 
-		#social a {
-			color: #333333;
-			display: inline-block;
-			font-size: 18px;
-			text-decoration: none;
-			-webkit-transition-duration: 400ms;
-			transition-duration: 400ms;
-			padding: 1em;
+		#social {
+			-webkit-transition-property: opacity;
+			transition-property: opacity;
+			-moz-transition: opacity 800ms ease 0s;
+			-o-transition: opacity 800ms ease 0s;
+			-webkit-transition: opacity 800ms ease 0s;
+			-ms-transition: opacity 800ms ease 0s;
+			transition: opacity 800ms ease 0s;
+			opacity:0.4;
+			-webkit-backface-visibility: hidden;
+
+
+			&:hover {
+				opacity:0.7;
+			}
+
+			a {
+				color: #333333;
+				display: inline-block;
+				font-size: 18px;
+				text-decoration: none;
+				-webkit-transition-property: opacity;
+				transition-property: opacity;
+				-moz-transition: opacity 800ms ease 0s;
+				-o-transition: opacity 800ms ease 0s;
+				-webkit-transition: opacity 800ms ease 0s;
+				-ms-transition: opacity 800ms ease 0s;
+				transition: opacity 800ms ease 0s;
+				padding: 1em;
+
+				&:hover {
+					opacity:1;
+					color:blue;
+				}
+			}
 		}
+
+	
 	}
 }
 
@@ -159,8 +188,11 @@ a {
 	margin: 30px 0 0;
 	display: block;
 	font-weight:100;
+
 	#logo_link {
 		text-decoration: none;
+		background: image-url("moving_underline.gif")repeat-x;
+		background-position: 0 100%;
 	}
 }
 }
