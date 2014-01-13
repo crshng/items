@@ -67,7 +67,7 @@ body {
 		#main {
 			display: block;
 
-			a {
+			a.nav_links {
 				color: inherit;
 				display: inline-block;
 				font-size: 18px;
@@ -76,14 +76,22 @@ body {
 				line-height: 1;
 				margin: 20px 20px 0 20px;
 				text-decoration: none;
+
+				transition-property: opacity;
 				-webkit-backface-visibility: hidden;
 				-webkit-transition-duration: 800ms;
 				transition-duration: 800ms;
-				text-decoration: none;
 
 				&:hover {
 					border-bottom: 1px dashed black;
 					opacity:0.7;
+				}
+
+				&.active {
+					border-bottom: 1px solid black;
+				}
+				&.visited {
+					border-bottom: 1px solid black;
 				}
 			}
 		}
