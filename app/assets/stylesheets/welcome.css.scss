@@ -20,6 +20,10 @@ body {
 	u {
 		text-decoration: none;
 		border-bottom: 2px solid #0089fa;
+
+		&:hover {
+			background-color:yellow;
+		}
 	}
 
 	h1 {
@@ -58,11 +62,17 @@ header {
 			font-weight: 400;
 			letter-spacing: 1px;
 			line-height: 1;
-			padding: 20px;
+			margin: 20px 20px 0 20px;
 			text-decoration: none;
 			-webkit-backface-visibility: hidden;
-			-webkit-transition-duration: 800ms;
-			transition-duration: 800ms;
+			-webkit-transition-duration: 500ms;
+			transition-duration: 500ms;
+			text-decoration: none;
+
+			&:hover {
+				border-bottom: 1px dashed black;
+				opacity:0.7;
+			}
 		}
 	}
 
