@@ -16,6 +16,8 @@ $(document).ready ->
     $("#about_link").addClass "active"
   if laststring == "explore"
     $("#explore_link").addClass "active"
+  if laststring == "contact"
+    $("#contact_link").addClass "active"
 
   $("#content").addClass "show"
 
