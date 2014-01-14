@@ -5,6 +5,10 @@ match "/you", to: "welcome#you"
 match "/about", to: "welcome#about"
 match "/contact", to: "welcome#contact"
 
+match "/404", :to => "errors#not_found", via: 'get'
+match "/422", :to => "errors#unacceptable", via: 'get'
+match "/500", :to => "errors#internal_error", via: 'get'
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
