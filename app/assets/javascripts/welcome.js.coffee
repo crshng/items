@@ -19,7 +19,7 @@ $(document).ready ->
   if laststring == "contact"
     $("#contact_link").addClass "active"
 
-  $("#content").addClass "show"
+  $("#body_content").addClass "show"
 
   $("#nav-toggle").click ->
     $("#main-mobile").toggleClass "active"
