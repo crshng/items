@@ -21,3 +21,6 @@ $(document).ready ->
 
   $("#content").addClass "show"
 
+  $("#nav-toggle").click ->
+    $("#main-mobile").toggleClass "active"
+    $(this).preventDefault();

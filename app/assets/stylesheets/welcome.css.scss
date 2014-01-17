@@ -1,5 +1,7 @@
 @import "bootstrap";
 
+$break-width: 768px;
+
 html {
     height: 100%;
 }
@@ -22,6 +24,7 @@ body {
 	margin: 0;
 	display: block;
 	overflow-y:hidden;
+	height:100%;
 
 
 	p {
@@ -102,7 +105,11 @@ body {
 		}
 
 		#main {
-			display: block;
+			display: none;
+
+			@media (min-width: $break-width) {
+			    display: block;
+			}
 
 			a.nav_links {
 				color: inherit;
@@ -143,6 +150,79 @@ body {
 			}
 		}
 
+		a#nav-toggle {
+			color: #222;
+		    display: inline-block;
+		    font-size: 45px;
+		    line-height: 16px;
+		    padding: 15px;
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    text-decoration: none;
+		   	
+		   	@media (min-width: $break-width) {
+		   		display:none;
+		   	}
+
+		}
+
+	}
+
+	nav#main-mobile {
+	    -moz-box-sizing: border-box;
+	    -webkit-box-sizing: border-box;
+	    box-sizing: border-box;
+	    overflow: hidden;
+	    text-align: center;
+	    -webkit-transition-duration: 800ms;
+	    transition-duration: 800ms;
+	    height: 0;
+
+	    a {
+	    	color: inherit;
+		    display: block;
+		    font-size: 18px;
+		    letter-spacing: 1px;
+		    line-height: 1;
+		    opacity: 0;
+		    -webkit-transition-duration: 400ms;
+		    transition-duration: 400ms;
+		    padding: 1em;
+		    text-decoration: none;
+		    -webkit-backface-visibility: hidden;
+
+	    }
+
+	    .section:first-child {
+		    margin-top: 54px;
+		    margin-bottom: 3em;
+		}
+
+	    &.active {
+	    	-webkit-transform: translateX(0);
+		    -ms-transform: translateX(0);
+		    transform: translateX(0);
+		    height: 379px;
+
+		    a {
+		    	opacity: 1;
+			    -webkit-transition-duration: 400ms;
+			    transition-duration: 400ms;
+			    -webkit-transition-delay: 400ms;
+			    transition-delay: 400ms;
+
+			    
+			    &:hover {
+					opacity:0.7;
+				}
+		    }
+	    }
+
+	    @media (min-width: $break-width) {
+		    display: none;
+		    position: static;
+		}
 	}
 
 	footer {
@@ -202,41 +282,29 @@ body {
 	}
 
 
-	section#content {
+	section#body_content {
 			background-color: white;
-			margin: auto;
-			max-width: 50%;
-			min-height: 100%;
-			-moz-box-sizing: border-box;
-			-webkit-box-sizing: border-box;
-			box-sizing: border-box;
-			position: relative;
-			padding: 160px 15px 0;
-			-webkit-transition-duration: 800ms;
-			transition-duration: 800ms;
-			-webkit-transition-property: opacity;
-			transition-property: opacity;
-			-moz-transition: opacity 1500ms ease 0s;
-			-o-transition: opacity 1500ms ease 0s;
-			-webkit-transition: opacity 1500ms ease 0s;
-			-ms-transition: opacity 1500ms ease 0s;
-			transition: opacity 1500ms ease 0s;
-			opacity:0;
-
-
-			.body_container {
-				padding:50px;
-			}
+		    margin: auto;
+		    max-width: 1024px;
+		    min-height: 100%;
+		    -moz-box-sizing: border-box;
+		    -webkit-box-sizing: border-box;
+		    box-sizing: border-box;
+		    position: relative;
+		    padding: 223px 0px 50px;
+		    -webkit-transition-duration: 800ms;
+		    transition-duration: 800ms;
+		    -webkit-transition-property: opacity;
+		    transition-property: opacity;
+		    display:block;
 			
 			&.show {
 				opacity:1;
 			}
 
 			.wrapper {
-				overflow: auto;
-				position: absolute;
-				top: 40%; left: 0; bottom: 0; right: 0;
-				vertical-align:middle;
+				max-width:80%;
+				margin:auto;
 
 				.email_container {
 					width:100%;
@@ -268,9 +336,12 @@ body {
 
 
 	#logo {
-		margin: 30px 0 0;
-		display: block;
+		display: none;
 		font-weight:100;
+
+		 @media (min-width: $break-width) {
+		    display: block;
+		}
 
 		#logo_link {
 			text-decoration: none;
@@ -285,5 +356,30 @@ body {
 			}
 		}
 	}
+
+	#logo_link_small {
+	    display: block;
+	    line-height: 24px;
+	    font-size:18px;
+	    position: relative;
+	    padding-top:15px;
+	    margin-left:20px;
+	    height:24px;
+	    width:50px;
+	    font-weight:100;
+	    text-decoration: none;
+	    background: image-url("underline-jagged.svg") repeat-x;
+		background-position: -45px 100%;
+		padding-bottom: 1px;
+		-webkit-animation: zoom-reset 1.0s ease-out 1;
+		&:hover {
+			-webkit-animation:zooming .85s linear infinite;
+		}
+
+	    @media (min-width: $break-width) {
+		    display: none;
+		}
+	}
+
 }
 
