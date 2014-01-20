@@ -115,7 +115,7 @@ body {
 			a.nav_links {
 				color: inherit;
 				display: inline-block;
-				font-size: 18px;
+				font-size: 18/16em;
 				font-weight: 400;
 				letter-spacing: 1px;
 				line-height: 1;
@@ -154,7 +154,7 @@ body {
 		a#nav-toggle {
 			color: #222;
 		    display: inline-block;
-		    font-size: 45px;
+		    font-size: 45/16em;
 		    line-height: 16px;
 		    padding: 15px;
 		    position: absolute;
@@ -183,7 +183,7 @@ body {
 	    a {
 	    	color: inherit;
 		    display: block;
-		    font-size: 18px;
+		    font-size: 18/16em;
 		    letter-spacing: 1px;
 		    line-height: 1;
 		    opacity: 0;
@@ -227,7 +227,7 @@ body {
 	}
 
 	footer {
-		font-size: 13px;
+		font-size: 13/16em;
 		margin: -54px auto 0;
 		max-width: 1008px;
 		overflow: hidden;
@@ -265,7 +265,7 @@ body {
 				a {
 					color: #333333;
 					display: inline-block;
-					font-size: 18px;
+					font-size: 18/16em;
 					text-decoration: none;
 					-webkit-transition-property: opacity;
 					transition-property: opacity;
@@ -367,7 +367,7 @@ body {
 	#logo_link_small {
 	    display: block;
 	    line-height: 24px;
-	    font-size:18px;
+	    font-size:18/16em;
 	    position: relative;
 	    padding-top:15px;
 	    margin-left:20px;
